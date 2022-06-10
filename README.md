@@ -50,5 +50,8 @@ TABLE 'students'
 | aurora@polito.it | password | pt |
 | chiara@polito.it | password | NULL |
 
-The password is the same for all the students, but considering that for each user has been used a unique salt (stored in the database), we will get different hashes.
+*Passwords were not stored explicitly in the database --> A secure password hashing function (scrypt, included in the crypto module) has been used.
+
+*The password is the same for all the students.
+However, considering that a unique salt was used for each user, we got different hashes.
 
