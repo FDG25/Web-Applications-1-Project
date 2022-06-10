@@ -30,7 +30,9 @@
 
 <details>
   <summary>Click to see how the tables were created!</summary>
+  
   <br/>
+  
     CREATE TABLE IF NOT EXISTS "courses" (
       "code" TEXT PRIMARY KEY NOT NULL,
       "name" TEXT UNIQUE NOT NULL,
