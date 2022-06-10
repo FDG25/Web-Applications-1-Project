@@ -27,15 +27,10 @@
 - Table `incompatibilities` - contains course_code incompatible_with
 - Table `selection` - contains course_code student_id
 
-# A collapsible section with markdown
 <details>
   <summary>Click to see how the tables were created!</summary>
   
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
+  
 </details>
 
 ## Main React Components
