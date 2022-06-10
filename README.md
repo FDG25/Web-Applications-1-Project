@@ -30,8 +30,8 @@
 
 <details>
   <summary>Click to see how the tables were created!</summary>
-  
-    CREATE TABLE IF NOT EXISTS "`courses`" (
+`  
+    CREATE TABLE IF NOT EXISTS "courses" (
     "code" TEXT PRIMARY KEY NOT NULL,
     "name" TEXT UNIQUE NOT NULL,
     "credits" INTEGER NOT NULL,
@@ -43,8 +43,9 @@
         length("code") = 7
     )
 );
-
-CREATE TABLE IF NOT EXISTS "`students`" (
+`
+`
+CREATE TABLE IF NOT EXISTS "students" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     "email" TEXT UNIQUE NOT NULL,
     "surname" TEXT NOT NULL,
@@ -53,8 +54,9 @@ CREATE TABLE IF NOT EXISTS "`students`" (
     "salt" TEXT UNIQUE NOT NULL,       
     "time_status" TEXT
 );
-
-  CREATE TABLE IF NOT EXISTS "`selection`"
+`
+`
+  CREATE TABLE IF NOT EXISTS "selection"
 (
     "course_code" TEXT NOT NULL,
     "student_id" INTEGER NOT NULL,
@@ -62,8 +64,9 @@ CREATE TABLE IF NOT EXISTS "`students`" (
     FOREIGN KEY(course_code) REFERENCES courses(code),	
     FOREIGN KEY(student_id) REFERENCES students(id)
 );
-
-CREATE TABLE IF NOT EXISTS "`incompatibilities`"
+`
+`
+CREATE TABLE IF NOT EXISTS "incompatibilities"
 (
     "course_code" TEXT NOT NULL,
     "incompatible_with" TEXT NOT NULL,
@@ -71,8 +74,7 @@ CREATE TABLE IF NOT EXISTS "`incompatibilities`"
     FOREIGN KEY(course_code) REFERENCES courses(code),	
     FOREIGN KEY(incompatible_with) REFERENCES courses (code)
 );
-
-  
+`
 </details>
 
 ## Main React Components
