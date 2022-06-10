@@ -40,7 +40,7 @@
 
 ## Users Credentials
 
-TABLE 'students'
+### TABLE 'students'
 | username (email) | password | time_status |
 |------------------|----------|-------------|
 | giuseppe@polito.it | password | ft |
