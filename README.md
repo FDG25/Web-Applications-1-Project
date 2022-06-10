@@ -39,8 +39,7 @@
 ![Screenshot](./img/screenshot.jpg)
 
 ## Users Credentials
-
-| TABLE students |
+| username (email) | password | time_status |
 |------------------|----------|-------------|
 | username (email) | password | time_status |
 |------------------|----------|-------------|
