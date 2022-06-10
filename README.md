@@ -40,6 +40,7 @@
 
 ## Users Credentials
 
+| TABLE students |
 | username (email) | password | time_status |
 |------------------|----------|-------------|
 | giuseppe@polito.it | password | ft |
@@ -48,3 +49,6 @@
 | sofia@polito.it | password | pt |
 | aurora@polito.it | password | pt |
 | chiara@polito.it | password | NULL |
+
+The password is the same for all the students, but considering that for each user has been used a unique salt (stored in the database), we will get different hashes.
+
