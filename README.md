@@ -44,7 +44,7 @@
     )
 );
 
-CREATE TABLE IF NOT EXISTS "students" (
+    CREATE TABLE IF NOT EXISTS "students" (
     "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     "email" TEXT UNIQUE NOT NULL,
     "surname" TEXT NOT NULL,
@@ -54,8 +54,7 @@ CREATE TABLE IF NOT EXISTS "students" (
     "time_status" TEXT
 );
 
-  CREATE TABLE IF NOT EXISTS "selection"
-(
+    CREATE TABLE IF NOT EXISTS "selection" (
     "course_code" TEXT NOT NULL,
     "student_id" INTEGER NOT NULL,
     PRIMARY KEY (course_code, student_id),
@@ -63,8 +62,7 @@ CREATE TABLE IF NOT EXISTS "students" (
     FOREIGN KEY(student_id) REFERENCES students(id)
 );
 
-CREATE TABLE IF NOT EXISTS "incompatibilities"
-(
+    CREATE TABLE IF NOT EXISTS "incompatibilities" (
     "course_code" TEXT NOT NULL,
     "incompatible_with" TEXT NOT NULL,
     PRIMARY KEY (course_code, incompatible_with),
