@@ -22,10 +22,10 @@
 
 ## Database Tables
 
-- Table `students` - contains id email surname name hash salt time_status
 - Table `courses` - contains code name credits max_students preparatory_course
-- Table `incompatibilities` - contains course_code incompatible_with
+- Table `students` - contains id email surname name hash salt time_status
 - Table `selection` - contains course_code student_id
+- Table `incompatibilities` - contains course_code incompatible_with
 
 
 <details>
