@@ -41,8 +41,7 @@
       CHECK(
           typeof("code") = "text" AND
           length("code") = 7
-      )
-);
+      ) );
 
     CREATE TABLE IF NOT EXISTS "students" (
       "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
