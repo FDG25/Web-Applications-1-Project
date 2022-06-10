@@ -58,15 +58,15 @@
       "course_code" TEXT NOT NULL,
       "student_id" INTEGER NOT NULL,
       PRIMARY KEY (course_code, student_id),
-      FOREIGN KEY(course_code) REFERENCES courses(code),	
-      FOREIGN KEY(student_id) REFERENCES students(id) );
+      FOREIGN KEY (course_code) REFERENCES courses(code),	
+      FOREIGN KEY (student_id) REFERENCES students(id) );
 
     CREATE TABLE IF NOT EXISTS "incompatibilities" (
       "course_code" TEXT NOT NULL,
       "incompatible_with" TEXT NOT NULL,
       PRIMARY KEY (course_code, incompatible_with),
-      FOREIGN KEY(course_code) REFERENCES courses(code),	
-      FOREIGN KEY(incompatible_with) REFERENCES courses (code) );
+      FOREIGN KEY (course_code) REFERENCES courses(code),	
+      FOREIGN KEY (incompatible_with) REFERENCES courses(code) );
 
 </details>
 
