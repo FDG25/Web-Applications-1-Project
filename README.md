@@ -50,8 +50,8 @@ TABLE 'students'
 | aurora@polito.it | password | pt |
 | chiara@polito.it | password | NULL |
 
-*Passwords were not stored explicitly in the database --> A secure password hashing function (scrypt, included in the crypto module) has been used.
+* Passwords were not stored explicitly in the database --> A secure password hashing function (scrypt, included in the crypto module) has been used.
 
-*The password is the same for all the students.
+* The password is the same for all the students.
 However, considering that a unique salt was used for each user, we got different hashes.
 
