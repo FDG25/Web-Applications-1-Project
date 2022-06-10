@@ -27,9 +27,50 @@
 - Table `incompatibilities` - contains course_code incompatible_with
 - Table `selection` - contains course_code student_id
 
+
 <details>
   <summary>Click to see how the tables were created!</summary>
-  
+    CREATE TABLE IF NOT EXISTS "`courses`" (
+    "code" TEXT PRIMARY KEY NOT NULL,
+    "name" TEXT UNIQUE NOT NULL,
+    "credits" INTEGER NOT NULL,
+    "max_students" INTEGER,
+    "preparatory_course" TEXT,
+    FOREIGN KEY (preparatory_course) REFERENCES courses(code)	
+    CHECK(
+        typeof("code") = "text" AND
+        length("code") = 7
+    )
+);
+
+CREATE TABLE IF NOT EXISTS "`students`" (
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "email" TEXT UNIQUE NOT NULL,
+    "surname" TEXT NOT NULL,
+    "name" TEXT NOT NULL,
+    "hash" TEXT NOT NULL,
+    "salt" TEXT UNIQUE NOT NULL,       
+    "time_status" TEXT
+);
+
+  CREATE TABLE IF NOT EXISTS "`selection`"
+(
+    "course_code" TEXT NOT NULL,
+    "student_id" INTEGER NOT NULL,
+    PRIMARY KEY (course_code, student_id),
+    FOREIGN KEY(course_code) REFERENCES courses(code),	
+    FOREIGN KEY(student_id) REFERENCES students(id)
+);
+
+CREATE TABLE IF NOT EXISTS "`incompatibilities`"
+(
+    "course_code" TEXT NOT NULL,
+    "incompatible_with" TEXT NOT NULL,
+    PRIMARY KEY (course_code, incompatible_with),
+    FOREIGN KEY(course_code) REFERENCES courses(code),	
+    FOREIGN KEY(incompatible_with) REFERENCES courses (code)
+);
+
   
 </details>
 
