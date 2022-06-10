@@ -41,6 +41,7 @@
 ## Users Credentials
 
 | TABLE students |
+|------------------|----------|-------------|
 | username (email) | password | time_status |
 |------------------|----------|-------------|
 | giuseppe@polito.it | password | ft |
