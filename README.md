@@ -39,8 +39,8 @@
 ![Screenshot](./img/screenshot.jpg)
 
 ## Users Credentials
-| username (email) | password | time_status |
-|------------------|----------|-------------|
+
+TABLE 'students'
 | username (email) | password | time_status |
 |------------------|----------|-------------|
 | giuseppe@polito.it | password | ft |
