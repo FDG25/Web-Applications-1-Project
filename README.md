@@ -40,5 +40,11 @@
 
 ## Users Credentials
 
-- username, password (plus any other requested info)
-- username, password (plus any other requested info)
+| username (email) | password | time_status |
+|------------------|----------|-------------|
+| giuseppe@polito.it | password | ft |
+| leonardo@polito.it | password | ft |
+| giulia@polito.it | password | ft |
+| sofia@polito.it | password | pt |
+| aurora@polito.it | password | pt |
+| chiara@polito.it | password | NULL |
