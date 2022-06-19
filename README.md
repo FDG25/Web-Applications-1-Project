@@ -75,20 +75,22 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 
 ## Main React Components
 
-- `App` (in `App.js`): component purpose and main functionality
-- `Layout` (in `Layout.js`): component purpose and main functionality
-- `Header` (in `Layout.js`): component purpose and main functionality
-- `Footer` (in `Layout.js`): component purpose and main functionality
-- `LoginRoute` (in `AuthComponents.js`): component purpose and main functionality
-- `LoginForm` (in `AuthComponents.js`): component purpose and main functionality
-- `LogoutButton` (in `AuthComponents.js`): component purpose and main functionality
-- `StudyPlan` (in `StudyPlan.js`): component purpose and main functionality
-- `SelectStatus` (in `SelectStatus.js`): component purpose and main functionality
-- `CourseTable` (in `CourseTable.js`): component purpose and main functionality
-- `CourseRow` (in `CourseRow.js`): component purpose and main functionality
-- `StudyPlanActions` (in `StudyPlanActions.js`): component purpose and main functionality
-- ...
+- `App` (in `App.js`): Returns the JSX of our React application.
+- `LoginRoute` (in `AuthComponents.js`): Contains the LoginForm component, which is used to implement the login functionality. When the form is filled in with a 
+valid email and a valid password, it can submitted and data are sent to the server. 
+- `LogoutButton` (in `AuthComponents.js`): Allows to logout from the application (exploiting the Passport authentication middleware) and to go back to the login page as an unauthenticated user.
+- `StudyPlan` (in `StudyPlan.js`): exploits conditional rendering to show up the SelectStatus component or the CourseTable component, based on whether or not a study plan has been created.
+- `SelectStatus` (in `SelectStatus.js`): Enables the user to specify the full-time or part-time option for his study plan.
+- `CourseTable` (in `CourseTable.js`): Borns to show up the full list of courses, but it has also been reused for both editing table and user's study plan. 
+- `CourseRow` (in `CourseRow.js`): Makes up the CourseTable component and contains CourseData and CourseActions component (contained in the same file). 
+CourseData is where we display courses data, whereas CourseAction contains the buttons that enable us to select/remove a course from our study plan. 
+- `StudyPlanActions` (in `StudyPlanActions.js`): While editing, contains buttons for saving/canceling changes made. Outside the editing mode, are shown buttons for
+editing/deleting a study plan.
 
+Minor Components:
+- `Layout` (in `Layout.js`)
+- `Header` (in `Header.js`)
+- `Footer` (in `Footer.js`)
 (only _main_ components, minor ones may be skipped)
 
 ## Screenshot
