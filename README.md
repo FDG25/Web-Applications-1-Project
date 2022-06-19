@@ -75,8 +75,18 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 
 ## Main React Components
 
-- `ListOfSomething` (in `List.js`): component purpose and main functionality
-- `GreatButton` (in `GreatButton.js`): component purpose and main functionality
+- `App` (in `App.js`): component purpose and main functionality
+- `Layout` (in `Layout.js`): component purpose and main functionality
+- `Header` (in `Layout.js`): component purpose and main functionality
+- `Footer` (in `Layout.js`): component purpose and main functionality
+- `LoginRoute` (in `AuthComponents.js`): component purpose and main functionality
+- `LoginForm` (in `AuthComponents.js`): component purpose and main functionality
+- `LogoutButton` (in `AuthComponents.js`): component purpose and main functionality
+- `StudyPlan` (in `StudyPlan.js`): component purpose and main functionality
+- `SelectStatus` (in `SelectStatus.js`): component purpose and main functionality
+- `CourseTable` (in `CourseTable.js`): component purpose and main functionality
+- `CourseRow` (in `CourseRow.js`): component purpose and main functionality
+- `StudyPlanActions` (in `StudyPlanActions.js`): component purpose and main functionality
 - ...
 
 (only _main_ components, minor ones may be skipped)
