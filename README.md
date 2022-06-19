@@ -79,9 +79,9 @@
 (only _main_ components, minor ones may be skipped)
 
 ## Screenshot
-
+ <br/>
 ![Screenshot](../main/screenshot.jpg)
-
+ <br/>
 ## Users Credentials
 
 | username (email) | password | time_status |
