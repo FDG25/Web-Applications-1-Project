@@ -3,7 +3,7 @@
 
 ## React Client Application Routes
 
-- Route ``: Layout route &rarr; Route with no path that wraps with a common layout the children routes /login, / and /edit. 
+- Route ` `: Layout route &rarr; Route with no path that wraps with a common layout the children routes `/login`, `/` and `/edit`. 
 - Route `/login`: Here I show up only the full list of courses and if the user click on the Login button, at the top of the page (in the right side), it is shown also the login form.
 Once the user insert the right credentials, we navigate to the next route (/), which is the homepage when the user is authenticated.
 (Unauthenticated users can only access this route)
