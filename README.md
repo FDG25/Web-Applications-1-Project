@@ -12,13 +12,35 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 
 ## API Server
 
-- POST `/api/login`
+- POST `/api/v1/sessions`
   - request parameters and request body content
   - response body content
-- GET `/api/something`
+- GET `/api/v1/sessions/current`
   - request parameters
   - response body content
-- POST `/api/something`
+- DELETE `/api/v1/sessions/current`
+  - request parameters and request body content
+  - response body content
+- GET `/api/v1/sessions/info`
+  - request parameters and request body content
+  - response body content
+ 
+- GET `/api/v1/courses`
+  - request parameters and request body content
+  - response body content
+- GET `/api/v1/students/:userId/courses`
+  - request parameters and request body content
+  - response body content
+- GET `/api/v1/courses/:code`
+  - request parameters and request body content
+  - response body content
+- PATCH `/api/v1/students/:userId/:status`
+  - request parameters and request body content
+  - response body content
+- POST `/api/v1/students/:userId/courses`
+  - request parameters and request body content
+  - response body content
+- DELETE `/api/v1/students/:userId/courses`
   - request parameters and request body content
   - response body content
 - ...
