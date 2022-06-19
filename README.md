@@ -88,9 +88,9 @@
 |------------------|----------|-------------|
 | giuseppe@polito.it | password | ft |
 | leonardo@polito.it | password | ft |
-| giulia@polito.it | password | ft |
+| giulia@polito.it | password | pt |
 | sofia@polito.it | password | pt |
-| aurora@polito.it | password | pt |
+| aurora@polito.it | password | NULL |
 | chiara@polito.it | password | NULL |
 
   * Passwords were not stored explicitly in the database -> A secure password hashing function (scrypt, included in the crypto module) has been used.
