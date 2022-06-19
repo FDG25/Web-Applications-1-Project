@@ -3,13 +3,12 @@
 
 ## React Client Application Routes
 
-- Route ` `: Layout route &rarr; Route with no path that wraps with a common layout the children routes `/login`, `/` and `/edit`. 
-- Route `/login`: Here I show up only the full list of courses and if the user click on the Login button, at the top of the page (in the right side), it is shown also the login form.
-Once the user insert the right credentials, we navigate to the next route (/), which is the homepage when the user is authenticated.
-(Unauthenticated users can only access this route)
-- Route `/`: page content and purpose, param specification
-- Route `/edit`: page content and purpose
-- Route `*`: Special route that will match only when no other routes in our React app do &rarr; Displays a warning and a button to return to the home page.
+- Route ` `: Layout route &rarr; Route with no path that wraps with a common layout the children routes `/login`, `/` and `/edit` &rarr; Made by a header, the full list of courses and a footer.
+- Route `/login`: Shows up the full list of courses and a "Login" button that when clicked displays the login form. (Unauthenticated users can only access this route and the "no match" one) &rarr; Once the user enters the right credentials, we navigate to the next route (/). 
+- Route `/`: If the currently logged-in user hasn’t already created his own study plan, he may create an empty one by specifying the full-time or
+part-time option. On the contrary, if a study plan has been created yet and has been persistently saved, it is showed up in the same page and can be edited directly (clicking on the edit icon we navigate to `/edit`). Furthermore, clicking on the trash icon the user can also decide to delete his study plan and start from scratch deciding the time status. &rarr; Under this section dedicated to the study plan also the full list of courses is displayed.
+- Route `/edit`: The currently logged-in user can select the courses that he wants to add to his study plan and then apply persistently the changes clicking on "Save". If everything is ok and the study plan can be saved, he is directly redirected to `/`, where his study plan is showed up with the new updates. During an editing session, the user may also click on "Delete". In this case the study plan will not be modified. &rarr; Under this editing section also the full list of courses is displayed.
+- Route `*`: "No Match" route &rarr; Special route that will match only when no other routes in our React app do &rarr; Displays a warning and a button to return to the home page.
 
 ## API Server
 
@@ -26,10 +25,10 @@ Once the user insert the right credentials, we navigate to the next route (/), w
 
 ## Database Tables
 
-- Table `courses` - contains code name credits max_students preparatory_course
-- Table `students` - contains id email surname name hash salt time_status
-- Table `selection` - contains course_code student_id
-- Table `incompatibilities` - contains course_code incompatible_with
+- Table `courses` - contains code name credits max_students preparatory_course &rarr; To store the courses and their features. 
+- Table `students` - contains id email surname name hash salt time_status &rarr; To store user related info, including the type of study plan (FT or PT).
+- Table `selection` - contains course_code student_id &rarr; To store the courses of each student.
+- Table `incompatibilities` - contains course_code incompatible_with &rarr; To store all the incompatibilities between courses.
 
 
 <details>
