@@ -80,7 +80,7 @@
 
 ## Screenshot
 
-![Screenshot](./img/screenshot.jpg)
+![Screenshot](../main/screenshot.jpg)
 
 ## Users Credentials
 
