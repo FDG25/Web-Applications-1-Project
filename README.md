@@ -9,7 +9,7 @@ Once the user insert the right credentials, we navigate to the next route (/), w
 
 - Route `/`: page content and purpose, param specification
 - Route `/edit`: page content and purpose
-- Route `*`: Special route that will match only when no other routes in our React app do &rarr;
+- Route `*`: Special route that will match only when no other routes in our React app do &rarr; Displays a warning and a button to return to the home page.
 
 ## API Server
 
