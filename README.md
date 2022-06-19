@@ -13,17 +13,17 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 ## API Server
 
 - POST `/api/v1/sessions`
-  - request parameters and request body content
-  - response body content
+  - Request body: empty.
+  - Response body: JSON of a user.
 - GET `/api/v1/sessions/current`
-  - request parameters
-  - response body content
+  - Request body: empty.
+  - Response body: JSON of a user.
 - DELETE `/api/v1/sessions/current`
-  - request parameters and request body content
-  - response body content
+  - Request body: empty.
+  - Response body: empty.
 - GET `/api/v1/sessions/info`
-  - request parameters and request body content
-  - response body content
+  - Request body: empty.
+  - Response body: JSON of a user.
  
 - GET `/api/v1/courses`
   - Request body: empty.
@@ -33,7 +33,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
   - Response body: array of Course objects (in JSON).
 - GET `/api/v1/courses/:code`
   - Request body: empty (the string representing the code is already in the URI).
-  - Response body: JSON of a new course.
+  - Response body: JSON of a course.
 - PATCH `/api/v1/students/:userId/:status`
   - Request body: empty (the strings representing the ID and the status are already in     the URI).
   - Response body: none (or error description).
