@@ -3,9 +3,13 @@
 
 ## React Client Application Routes
 
-- Route `/`: page content and purpose
-- Route `/something/:param`: page content and purpose, param specification
-- ...
+- Route `/login`: Here I show up only the full list of courses and if the user click on the Login button, at the top of the page (in the right side), it is shown also the login form.
+Once the user insert the right credentials, we navigate to the next route (/), which is the homepage when the user is authenticated.
+(Unauthenticated users can only access this route)
+
+- Route `/`: page content and purpose, param specification
+- Route `/edit`: page content and purpose
+- Route `*`: Special route that will match only when no other routes in our React app do &rarr;
 
 ## API Server
 
