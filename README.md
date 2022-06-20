@@ -35,7 +35,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
   - Request body: empty (the string representing the code is already in the URI).
   - Response body: JSON of a course.
 - PATCH `/api/v1/students/current/:status`
-  - Request body: empty (the strings representing the status is already in the URI).
+  - Request body: empty (the string representing the status is already in the URI).
   - Response body: none (or error description).
 - POST `/api/v1/students/current/courses`
   - Request body: array of Course objects (in JSON).
