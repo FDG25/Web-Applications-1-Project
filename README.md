@@ -28,20 +28,20 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 - GET `/api/v1/courses`
   - Request body: empty.
   - Response body: array of Course objects (in JSON).
-- GET `/api/v1/students/:userId/courses`
-  - Request body: empty (the string representing the ID is already in the URI).
+- GET `/api/v1/students/current/courses`
+  - Request body: empty.
   - Response body: array of Course objects (in JSON).
 - GET `/api/v1/courses/:code`
   - Request body: empty (the string representing the code is already in the URI).
   - Response body: JSON of a course.
-- PATCH `/api/v1/students/:userId/:status`
-  - Request body: empty (the strings representing the ID and the status are already in     the URI).
+- PATCH `/api/v1/students/current/:status`
+  - Request body: empty (the strings representing the status is already in the URI).
   - Response body: none (or error description).
-- POST `/api/v1/students/:userId/courses`
+- POST `/api/v1/students/current/courses`
   - Request body: array of Course objects (in JSON).
   - Response body: none (or error description).
-- DELETE `/api/v1/students/:userId/courses`
-  - Request body: empty (the string representing the ID is already in the URI).
+- DELETE `/api/v1/students/current/courses`
+  - Request body: empty.
   - Response body: empty (or error description).
 - ...
 
