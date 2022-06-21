@@ -50,7 +50,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 - Table `students` - contains id email surname name hash salt time_status &rarr; To store user related info, including the type of study plan (FT or PT).
 - Table `selection` - contains course_code student_id &rarr; To store the courses of each student.
 - Table `incompatibilities` - contains course_code incompatible_with &rarr; To store all the incompatibilities between courses.
-
+- Trigger 'forbid_insertion'
 
 <details>
   <summary>Click to see how the tables were created!</summary>
@@ -91,6 +91,13 @@ part-time option. On the contrary, if a study plan has been created yet and has 
       PRIMARY KEY (course_code, incompatible_with),
       FOREIGN KEY (course_code) REFERENCES courses(code),	
       FOREIGN KEY (incompatible_with) REFERENCES courses(code) );
+
+    CREATE TRIGGER forbid_insertion BEFORE INSERT ON selection  
+    FOR EACH ROW 
+    WHEN (SELECT count(DISTINCT sel.student_id) AS no_stds FROM courses c LEFT JOIN selection sel ON c.code = sel.course_code WHERE sel.course_code = new.course_code       GROUP BY c.code) >= (SELECT c.max_students FROM courses c WHERE c.code = new.course_code)
+    BEGIN
+    SELECT RAISE(FAIL, "Error! This study plan is not valid -> The maximum number of students for some courses is not respected");
+    END;  
 
 </details>
 
