@@ -13,11 +13,11 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 ## API Server
 
 - POST `/api/v1/sessions`
-  - Request body: empty.
+  - Request body: credentials (username and password).
   - Response body: JSON of a user that was just validated (Passport will populate the user for us).
 - GET `/api/v1/sessions/current`
-  - Request body: credentials (username and password).
-  - Response body: JSON of a user.
+  - Request body: empty.
+  - Response body: JSON of the current user of the current session.
 - DELETE `/api/v1/sessions/current`
   - Request body: empty.
   - Response body: empty.
@@ -42,7 +42,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
   - Response body: none (or error description).
 - DELETE `/api/v1/students/current/courses`
   - Request body: empty.
-  - Response body: empty (or error description).
+  - Response body: none (or error description).
 
 ## Database Tables
 
