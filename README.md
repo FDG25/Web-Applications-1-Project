@@ -50,7 +50,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 - Table `students` - contains id email surname name hash salt time_status &rarr; To store user related info, including the type of study plan (FT or PT).
 - Table `selection` - contains course_code student_id &rarr; To store the courses of each student.
 - Table `incompatibilities` - contains course_code incompatible_with &rarr; To store all the incompatibilities between courses.
-- Trigger `forbid_insertion`
+- Trigger `forbid_insertion` - IN ORDER TO BE SURE THAT THE NUMBER OF ENROLLED STUDENTS IN EACH COURSE DOES NOT EXCEED THE MAXIMUM NUMBER
 
 <details>
   <summary>Click to see how the tables and the trigger were created!</summary>
