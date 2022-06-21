@@ -14,9 +14,9 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 
 - POST `/api/v1/sessions`
   - Request body: empty.
-  - Response body: JSON of a user.
+  - Response body: JSON of a user that was just validated (Passport will populate the user for us).
 - GET `/api/v1/sessions/current`
-  - Request body: empty.
+  - Request body: credentials (username and password).
   - Response body: JSON of a user.
 - DELETE `/api/v1/sessions/current`
   - Request body: empty.
@@ -43,7 +43,6 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 - DELETE `/api/v1/students/current/courses`
   - Request body: empty.
   - Response body: empty (or error description).
-- ...
 
 ## Database Tables
 
@@ -112,7 +111,6 @@ Minor Components:
 - `Layout` (in `Layout.js`)
 - `Header` (in `Header.js`)
 - `Footer` (in `Footer.js`)
-(only _main_ components, minor ones may be skipped)
 
 ## Screenshot
 
