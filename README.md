@@ -114,6 +114,8 @@ Minor Components:
 
 ## Screenshot
 
+Error messages are showed up when hovering on the alert icon.
+
 ![Screenshot](../main/screenshot.jpg)
  <br/>
 ## Users Credentials
