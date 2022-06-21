@@ -109,7 +109,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 - `LoginRoute` (in `AuthComponents.js`): Contains the LoginForm component, which is used to implement the login functionality. When the form is filled in with a 
 valid email and a valid password, it can be submitted. 
 - `LogoutButton` (in `AuthComponents.js`): Allows to logout from the application and to go back to the login page as an unauthenticated user.
-- `StudyPlan` (in `StudyPlan.js`): exploits conditional rendering to show up the SelectStatus component or the CourseTable component, based on whether or not a study plan has been created yet.
+- `StudyPlan` (in `StudyPlan.js`): Exploits conditional rendering to show up the SelectStatus component or the CourseTable component, based on whether or not a study plan has been created yet.
 - `SelectStatus` (in `SelectStatus.js`): Enables the user to specify the full-time or part-time option for his study plan.
 - `CourseTable` (in `CourseTable.js`): Borns to show up the full list of courses, but it has also been reused for both editing table and user's study plan. 
 - `CourseRow` (in `CourseRow.js`): Makes up the CourseTable component and contains CourseData and CourseActions component (contained in the same file). 
