@@ -53,7 +53,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 - Trigger `forbid_insertion`
 
 <details>
-  <summary>Click to see how the tables were created!</summary>
+  <summary>Click to see how the tables and the trigger were created!</summary>
   
   <br/>
   
@@ -92,11 +92,13 @@ part-time option. On the contrary, if a study plan has been created yet and has 
       FOREIGN KEY (course_code) REFERENCES courses(code),	
       FOREIGN KEY (incompatible_with) REFERENCES courses(code) );
 
-    CREATE TRIGGER forbid_insertion BEFORE INSERT ON selection  
+    CREATE TRIGGER forbid_insertion 
+    BEFORE INSERT ON selection  
     FOR EACH ROW 
-    WHEN (SELECT count(DISTINCT sel.student_id) AS no_stds FROM courses c LEFT JOIN selection sel ON c.code = sel.course_code WHERE sel.course_code = new.course_code       GROUP BY c.code) >= (SELECT c.max_students FROM courses c WHERE c.code = new.course_code)
+    WHEN 
+    (SELECT count(DISTINCT sel.student_id) AS no_stds FROM courses c LEFT JOIN selection sel ON c.code = sel.course_code WHERE sel.course_code = new.course_code            GROUP BY c.code) >= (SELECT c.max_students FROM courses c WHERE c.code = new.course_code)
     BEGIN
-    SELECT RAISE(FAIL, "Error! This study plan is not valid -> The maximum number of students for some courses is not respected");
+      SELECT RAISE(FAIL, "Error! This study plan is not valid -> The maximum number of students for some courses is not respected");
     END;  
 
 </details>
