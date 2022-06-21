@@ -123,7 +123,7 @@ Minor Components:
 
 ## Screenshot
 
-* Error messages are showed up when hovering over the alert icon.
+* Error messages are showed up when hovering over the alert icon. (The border is not part of the website but it has been added to the screenshot only).
 
 ![Screenshot](../main/screenshot.jpg)
  <br/>
