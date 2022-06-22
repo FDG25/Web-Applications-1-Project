@@ -1,3 +1,4 @@
+/*DEFAULT CSS:
 .App {
   text-align: center;
 }
@@ -35,4 +36,171 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+*/
+
+/*** EXTRA ***/
+#root {
+  overflow-x: hidden;   /*IN THIS WAY WE AVOID ROWS THAT HAVE A WIDTH GREATER THAN SCREEN WIDTH*/
+  overflow-y: hidden;    /*TO REMOVE THE EXTRA VERTICAL SCROLL BAR THAT APPEARS WHEN SETTING overflow-x: hidden;*/
+}
+body {  /*To avoid Scroll Anchoring*/
+  overflow-anchor: none;
+}
+.redcolor {
+  color: red;
+  position: absolute;  /*IN THIS WAY WE CAN Display error messages in the form without moving elements THAT ARE BELOW*/
+}
+
+@media (min-width: 400px) and (max-width: 460px){
+  .redcolor {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 365px) and (max-width: 400px){
+  .redcolor {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 365px){
+  .redcolor {
+    font-size: 0.7rem;
+  }
+}
+
+.header {
+  padding: 70px;
+  text-align: center;
+  background: rgb(253,163,7);
+  color: black;
+  font-size: 2.3rem;
+  border-bottom: 1px solid chocolate;
+}
+
+@media (max-width: 650px) {
+  .header {
+    padding: 75px;
+  }
+}
+
+/*FOOTER*/
+footer {
+  background-color: rgb(253,163,7, 0.8);
+  color: rgba(255, 255, 255, .8); 
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 1.1rem;
+  height: 6rem; 
+  padding: 1.6rem; 
+  text-align: center; 
+  border-top: 1px solid chocolate;
+}
+
+@media (max-width: 520px) {  
+  footer {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+}
+
+address a{  
+  color: rgba(255, 255, 255, .8);  
+  text-decoration: none;
+}
+
+address a:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+#lineaconclusiva{
+  color: white;
+  border-bottom: 1px solid black;
+  border-top: 1px solid chocolate; 
+  background-color: rgb(253,163,7);
+}
+ 
+@media (max-width: 520px) {
+  address a, #lineaconclusiva {
+    font-size: 0.95em;
+    line-height: 2rem;
+  }
+}
+/*FOOTER END*/
+
+.fixed-right-top {  /*for login/logout buttons*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin: 1rem 1.5rem 1.5rem 0;
+  border-radius: 50%;
+}
+
+.fixed-left-top {  /*for welcome, *surname name* alert*/
+  position: absolute;
+  font-size: 1.2rem;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+}
+
+@media (max-width: 1020px) {
+  .fixed-left-top {  
+    font-size: 0.9rem;
+    top: 0.3rem;
+    left: 0.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .fixed-left-top {  
+    font-size: 0.75rem;
+    top: 0.8rem;
+    left: 1rem;
+  }
+}
+
+.edit-button:hover:enabled{  /*EVERY Button COMPONENT IS TRANSLATED INTO A button HTML ELEMENT WITH CLASS "btn"*/
+  background-color: rgb(0, 0, 0, 0.6);
+}
+.edit-button:active:enabled{
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.bg-orange{
+  background-color: orange !important;
+}
+
+.row-greenbackgroundcolor{
+  background-color: #ccf7cc;
+}
+
+.row-redbackgroundcolor{
+  background-color: #f7cccc;
+}
+
+.centered{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.same-line{  /*CourseActions*/
+  display: flex;
+  align-items: center;
+}
+
+.popup {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1rem;
+  position: absolute;
+  right: 8.07rem;
+  background: rgba(211, 211, 212, 0.95);
+  margin-top: -0.55rem;
+  height: 2.3rem;
+  line-height: 1.95rem;
+  width: 37.9rem;
 }
