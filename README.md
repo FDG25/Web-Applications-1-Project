@@ -21,7 +21,7 @@ part-time option. On the contrary, if a study plan has been created yet and has 
 - DELETE `/api/v1/sessions/current`
   - Request body: empty.
   - Response body: empty.
-- GET `/api/v1/sessions/info`
+- GET `/api/v1/sessions/current/info`
   - Request body: empty.
   - Response body: JSON of a user.
  
@@ -123,7 +123,7 @@ Minor Components:
 
 ## Screenshot
 
-* Error messages are showed up when hovering over the alert icon. (The border is not part of the website but it has been added to the screenshot only).
+* Error messages are showed up when hovering over the alert icons. (The border is not part of the website but it has been added to the screenshot only).
 
 ![Screenshot](../main/screenshot.jpg)
  <br/>
