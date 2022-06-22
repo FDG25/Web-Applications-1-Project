@@ -123,8 +123,9 @@ Minor Components:
 
 ## Screenshot
 
-* Error messages are showed up when hovering over the alert icons. (The border is not part of the website but it has been added to the screenshot only).
+* Error messages are showed up when hovering over the alert icons.
 * I handled the maximum number of enrolled students in such a way that, when editing the study plan, the user can select/deselect a course for which he has taken one of the available slots. Whereas, if a user hasn't already added in his study plan a course that is full, he will not be able to select/deselect this one until someone else removes it from his study plan.
+* The border is not part of the website but it has been added to the screenshot only
 
 ![Screenshot](../main/screenshot.jpg)
  <br/>
