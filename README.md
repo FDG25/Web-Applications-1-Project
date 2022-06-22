@@ -124,7 +124,7 @@ Minor Components:
 ## Screenshot
 
 * Error messages are showed up when hovering over the alert icons.
-* I handled the maximum number of enrolled students in such a way that, when editing the study plan, the user can select/deselect a course for which he has taken one of the available slots. Whereas, if a user hasn't already added in his study plan a course that is full, he will not be able to select/deselect this one until someone else removes it from his study plan.
+* TO FACILITATE TESTING: I handled the maximum number of enrolled students in such a way that, when editing the study plan, the user can select/deselect a course for which he has already taken one of the available slots. Whereas, if a user hasn't already added in his study plan a course that is full, he will not be able to select/deselect this one until someone else removes it from his study plan. (While editing the counter is not updated in real time when selecting/deselecting a course, but it is updated after saving the changes made). 
 * The border is not part of the website but it has been added to the screenshot only
 
 ![Screenshot](../main/screenshot.jpg)
